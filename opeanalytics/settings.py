@@ -27,7 +27,7 @@ SECRET_KEY = 's(w4*%06-=xef#1jitp6iq=rww5o-_ze4q4$*sa*ypw-(&%j^n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']   #
+ALLOWED_HOSTS = ['ope-analytics.herokuapp.com']   #
 
 
 # Application definition
