@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Analytics - OPE1</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <center>
+    <h1>OPE1 - Projeto Grupo Analytics</h1>
+
+    <img src="{% static 'images/AnalyticsLogo.jpg' %}"/>
+    <h2>{{ exemplo }}</h2>
+    <h3>{{ exemplo2 }}</h3>
+    <span>{{ logado }}</span>
+
+    <table>
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Nome</th>
+                <th>Cor</th>
+                <th>Tamanho</th>
+                <th>Categoria</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for produto in produtos %}
+            <tr>
+                <td>{{ produto.sku }}</td>
+                <td><a href="{% url 'produto' produto.pk %}">{{ produto.nome }}</a></td>
+                <td>{{ produto.cor }}</td>
+                <td>{{ produto.tamanho }}</td>
+                <td>{{ produto.categoria }}</td>
+                <td>{{ produto.preco }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="teste()";>Clique-me</button>
+
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    </center>
+</body>
+</html>
