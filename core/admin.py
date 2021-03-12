@@ -8,7 +8,7 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 
 class ClienteAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'sobrenome', 'telefone', 'creditlimit')
+    list_display = ('nome', 'telefone', 'creditlimit')
 
 
 admin.site.register(Produto, ProdutoAdmin)
